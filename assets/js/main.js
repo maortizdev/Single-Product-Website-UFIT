@@ -33,16 +33,30 @@ const showMenu = () => {
     changeMenuIcon();
 }
 
-const closeMenu (e) => {
+const closeMenu = (e) => {
     // Close menu when clicking outside of the opened menu
     if (e.target.id !== 'nav-toggle' && e.target.id !== 'nav-menu') {
         cover.style.opacity = 0;
         cover.style.zIndex = -10;
-        navToggle.getAttribute.remove
+        navToggle.setAttribute('name', 'menu');
+        navMenu.classList.remove('show-menu');
     }
 }
+
 
 navToggle.addEventListener('click', showMenu);
 document.addEventListener('click', closeMenu);
 /* ==================== SCROLL HEADER SHADOW ====================*/
+
+const scrollHeader = () => {
+    const header = document.getElementById('header');
+
+    if (this.scrollY >= 100) {
+        header.classList.add('scroll-header');
+    } else {
+        header.classList.remove('scroll-header');
+    }
+}
+
+window.addEventListener('scroll', scrollHeader);
 /* ==================== SCROLL REVEAL ANIMATION ====================*/
