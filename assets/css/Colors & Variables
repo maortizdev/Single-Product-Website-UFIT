@@ -1,0 +1,54 @@
+$header-height: 6.5rem;
+
+// Colors
+$first-color: hsl(221, 100%, 39%);
+$first-color-light: hsl(221, 100%, 54%);
+$first-color-dark: hsl(221, 100%, 26%);
+$secondary-color: hsl(162, 100%, 38%);
+$secondary-color-light: hsl(162, 100%, 49%);
+$secondary-color-dark: hsl(162, 100%, 26%);
+$title-color: #393939;
+$text-color: #707070;
+$body-color: #FBFEFD;
+$container-color: #FFFFFF;
+
+// Font & Typography
+$nav-font: 'Poppins', sans-serif;
+$title-font: 'Arvo', serif;
+$text-font: 'Roboto', sans-serif;
+
+$header-font-size: 3.7rem;
+$small-header-font-size: 2.9rem;
+$h1-font-size: 2.3rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.8rem;
+$normal-font-size: 1.6rem;
+$small-font-size: 1.4rem;
+$smaller-font-size: .95rem;
+
+// For desktop devices
+@media only screen and(min-width: 768px) {
+    $header-font-size: 6.7rem;
+    $h1-font-size: 3.4rem;
+    $h2-font-size: 2.6rem;
+    $h3-font-size: 2.2rem;
+    $normal-font-size: 1.8rem;
+    $small-font-size: 1.2rem;
+    $smaller-font-size: .813rem;
+
+}
+
+// Font Weight
+$medium-font: 500;
+$semi-bold-font: 600;
+$bold-font: 700;
+
+// Margins
+$mb-1: .8rem;
+$mb-2: 1.6rem;
+$mb-3: 2.4rem;
+$mb-4: 3.2rem;
+$mb-5: 4rem;
+$mb-6: 4.8rem;
+
+$transition-4s: all .4s ease;

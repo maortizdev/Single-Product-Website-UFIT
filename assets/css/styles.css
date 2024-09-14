@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
+
+/* ==================== RESETS ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #707070;
+    background-color: #FBFEFD;
+    line-height: 1.6;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.6rem;
+    color: #707070;
+    font-family: 'Roboto', san-serif;
+}
+
+h1 {
+    font-family: "Arvo", serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    color: #393939;
+}
+
+/* ==================== REUSABLE CLASSES ==================== */
+.section {
+    padding: 4rem 0 2rem;
+    background-color: #FBFEFD;
+}
+
+.section-title,
+.section-subtitle {
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3rem;
+    color: #393939;
+    margin-bottom: 2.4rem;
+}
+
+.section-subtitle {
+    font-size: 1.6rem;
+    display: block;
+    color: hsl(162deg, 100%, 38%);
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.icon {
+    font-size: 3.2rem;
+    color: #707070;
+}
+
+.button {
+    font-size: 1.8rem;
+    background-color: hsl(221deg, 100%, 39%);
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    line-height: 1.25;
+    min-height: 3rem;
+    padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+    transition: all 250ms;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button:hover,
+.button:focus {
+    background-color: hsl(221deg, 100%, 54%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button:active {
+    background-color: hsl(221deg, 100%, 26%);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    transform: translateY(0);
+}
+
+.button-primary {
+    color: #FBFEFD;
+    background-color: hsl(221, 100%, 39%);
+}
+
+.button-secondary {
+    color: hsl(162deg, 100%, 38%);
+    border: 1px solid hsl(162deg, 100%, 38%);
+    margin-right: 1.6rem;
+    background-color: #FBFEFD;
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+    color: hsl(162deg, 100%, 26);
+    border-color: hsl(162deg, 100%, 26);
+    background-color: #FBFEFD;
+}
+
+/* ==================== LAYOUT ==================== */
+.container {
+    max-width: 1200px;
+    width: calc(100% -1.6rem);
+    margin: 0 0.8rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #FBFEFD;
+}
+
+/* ==================== JAVASCRIPT CLASSES ==================== */
+.show-menu {
+    top: 6.5rem;
+    left: 0 !important;
+}
+
+.cover {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: -10;
+    transition: all 0.4s ease;
+}
+
+.scroll-header {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    transition: all 0.4s ease-in-out;
+}
+
+/* ==================== NAV ==================== */
+.nav {
+    max-width: 1200px;
+    height: 6.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width:767px) {
+    .nav__menu {
+        position: fixed;
+        top: 6.5rem;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: #FBFEFD;
+        transition: all 0.4s ease;
+        padding: 2.5rem 2.5rem;
+        font-size: 2rem;
+        z-index: 50;
+    }
+}
+
+.nav__list {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav__link {
+    color: #393939;
+}
+
+.nav__logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    color: hsl(221deg, 100%, 39%);
+}
+
+.nav__logo::first-letter {
+    color: hsl(162deg, 100%, 38%);
+}
+
+.nav__item {
+    margin: 3rem 0;
+}
+
+.nav__ctas {
+    margin-top: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav__cart {
+    display: flex;
+    align-items: center;
+}
+
+.nav__cart .button {
+    margin-right: 1.6rem;
+    font-size: 1.6rem;
+    padding: 0.3rem 2rem;
+}
+
+/* ==================== HOME - HERO SECTION ==================== */
+main {
+    position: absolute;
+    top: 6.5rem;
+}
+
+/* ==================== FEATURES ==================== */
+/* ==================== PRODUCT ==================== */
+/* ==================== MEDIA QUERIES ==================== */
+/* ==================== MIN WIDTH ==================== */
